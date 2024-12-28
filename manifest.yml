@@ -1,0 +1,22 @@
+modules:
+  macro:
+    - key: squad-1002-pizza-recipe-app-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: squad-1002-pizza-recipe-app
+      config: true
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/e68084f6-c0ca-4558-b8b2-da58ec49c539
+permissions:
+  scopes:
+    - storage:app
